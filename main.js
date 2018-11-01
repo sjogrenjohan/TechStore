@@ -11,21 +11,47 @@ function loadProducts() {
         addProductsToWebpage();
     });
 }
-
+//Skapar en div för mobilprodukten på sidan
+var mobileTemplate = document.createElement("div");
+mobileTemplate.className = "mobileTemplateClass";
 
 function initSite() {
     loadProducts();
-    // This would also be a good place to initialize other parts of the UI
+    
 }
+
 
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
-    // Check your console to see that the products are stored in the listOfProducts varible.
-    console.log(listOfProducts);
+    for(var i=0; i < listOfProducts.length; i++)  {
+        var mobileProduct = createMobileCard(listOfProducts[i]);
+        mobileTemplate.appendChild(mobileProduct);
+    }
+    document.body.appendChild(mobileTemplate);
 
-    // Add your code here, remember to brake your code in to smaller function blocks
-    // to reduce complexity and increase readability. Each function should have
-    // an explainetory comment like the one for this function, see row 22.
-    
-    // TODO: Remove the console.log and these comments when you've read them.
+}
+
+function createMobileCard(listOfProducts) {
+    var mobileProduct = document.createElement("div");
+    mobileProduct.className = "divMobileProduct";
+
+    var mobileName = document.createElement("h3")
+    mobileName.innerText = " " +listOfProducts.title;
+    mobileProduct.appendChild(mobileName);
+
+    var mobileName = document.createElement("p")
+    mobileName.innerText = " " +listOfProducts.description;
+    mobileProduct.appendChild(mobileName);
+
+    var mobileImage = document.createElement("img");
+    var imageName = "./assets/iPhoneX.png";
+    mobileImage.src = " " +imageName;
+    mobileProduct.appendChild(mobileImage);
+
+    var mobileName = document.createElement("p")
+    mobileName.innerText = " " +listOfProducts.price;
+    mobileProduct.appendChild(mobileName);
+
+
+    return mobileProduct;
 }

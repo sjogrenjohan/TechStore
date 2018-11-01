@@ -2,16 +2,6 @@ body, html {
     height: 100%;
 }
 
-.greyBackground {
-    background: lightgrey;
-    height: 100%;
-}
-
-.whiteBackground {
-    background: white;
-    height: 100%;
-}
-
 img {
     border-radius: 8px;
     width: 300px;
@@ -40,7 +30,13 @@ h3 {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     flex-wrap: wrap;
+
+}
+
+.divMobileProduct {
+
     width: 50%;
+    height: 100%;
 }

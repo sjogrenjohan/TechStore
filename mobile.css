@@ -2,12 +2,41 @@ body, html {
     height: 100%;
 }
 
-.greyBackground {
-    background: lightgrey;
-    height: 100%;
+img {
+    border-radius: 8px;
+    width: 300px;
+    height: 300px;
 }
 
-.whiteBackground {
-    background: white;
+p {
+    margin: 0;
+    font-family: 'Krub', sans-serif;
+    font-size: 16px;
+    padding-left: 1em;
+    
+}
+
+h3 {
+    font-family: 'Krub', sans-serif;
+    font-size: 26px;
+    font-weight: 100;
+    margin: 0;
+    padding-left: 0.6em;
+    padding-top: 0.3em;
+}
+
+.mobileTemplateClass {
+/*     border: 1px solid #5596F5; */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.divMobileProduct {
+
+    width: 50%;
     height: 100%;
 }

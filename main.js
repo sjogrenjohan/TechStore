@@ -35,7 +35,7 @@ function createMobileCard(listOfProducts) {
     var mobileProduct = document.createElement("div");
     mobileProduct.className = "divMobileProduct";
 
-    var mobileName = document.createElement("h3")
+    var mobileName = document.createElement("h2")
     mobileName.innerText = " " +listOfProducts.title;
     mobileProduct.appendChild(mobileName);
 
@@ -45,11 +45,11 @@ function createMobileCard(listOfProducts) {
 
     var mobileImage = document.createElement("img");
     var imageName = "./assets/iPhoneX.png";
-    mobileImage.src = " " +imageName;
+    mobileImage.src = " " +listOfProducts.image;
     mobileProduct.appendChild(mobileImage);
 
     var mobileName = document.createElement("p")
-    mobileName.innerText = " " +listOfProducts.price;
+    mobileName.innerText = listOfProducts.price + " kr ";
     mobileProduct.appendChild(mobileName);
 
 

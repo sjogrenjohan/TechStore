@@ -41,3 +41,11 @@ h3 {
     height:100vh;
     padding-top: 3em;
 }
+
+.shoppingCartButton {
+    background: #5596F5;
+    border-radius: 0.7em;
+    padding: 1em;
+    color: white;
+    width:20%;
+}

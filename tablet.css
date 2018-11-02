@@ -11,7 +11,6 @@
     }
 
     .mobileTemplateClass {
-        /*     border: 1px solid #5596F5; */
             border-radius: 8px;
             display: flex;
             flex-direction: column;

@@ -52,10 +52,17 @@ function createMobileCard(listOfProducts) {
     mobileName.innerText = listOfProducts.price + " kr ";
     mobileProduct.appendChild(mobileName);
 
-    var shoppingCart = document.createElement("p")
-    shoppingCart.className = "shoppingCartButton fa fa-cart-arrow-down "
-    shoppingCart.innerText = " Lägg till i kundvagnen"
-    mobileProduct.appendChild(shoppingCart)
+    var shoppingButton = document.createElement("div")
+    shoppingButton.className = "shoppingCartButton"
+    var shoppingCart = document.createElement("span")
+    shoppingCart.className = "fa fa-cart-arrow-down "
+    var shoppingCartText = document.createElement("span")
+    shoppingCartText.innerText = " Lägg till i kundvagnen"
+    mobileProduct.appendChild(shoppingButton)
+    shoppingButton.appendChild(shoppingCart)
+    shoppingButton.appendChild(shoppingCartText)
+    
+
 
 
     return mobileProduct;

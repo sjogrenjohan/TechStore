@@ -44,7 +44,7 @@ function createMobileCard(listOfProducts) {
     mobileProduct.appendChild(mobileName);
 
     var mobileImage = document.createElement("img");
-    var imageName = "./assets/iPhoneX.png";
+    //var imageName = "./assets/iPhoneX.png";
     mobileImage.src = " " +listOfProducts.image;
     mobileProduct.appendChild(mobileImage);
 

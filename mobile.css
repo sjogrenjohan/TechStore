@@ -30,7 +30,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 3em;
+    padding-top: 5em;
 }
 
 .divMobileProduct {
@@ -40,7 +40,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    width: 1000vw;
+    width: 100vw;
     height: 100vh;
 }
 

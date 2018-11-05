@@ -9,3 +9,5 @@ Design changes:
 FONT
 * Changed the font style for a more modern and lean style
 
+COUNTER FOR SHOPPING CART
+* Made it smaller than the original for a better look

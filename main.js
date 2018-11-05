@@ -1,6 +1,6 @@
 var listOfProducts;
 
-/** Get products from the json file and store it in a gobal variable */
+/** Get products from the json file and store it in a global variable */
 function loadProducts() {
     fetch("./products.json")
     .then(function(response) {
@@ -11,21 +11,68 @@ function loadProducts() {
         addProductsToWebpage();
     });
 }
-
+//Skapar en div för mobilprodukten på sidan
+var mobileTemplate = document.createElement("div");
+mobileTemplate.className = "mobileTemplateClass";
 
 function initSite() {
     loadProducts();
-    // This would also be a good place to initialize other parts of the UI
+    
 }
+
 
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
-    // Check your console to see that the products are stored in the listOfProducts varible.
-    console.log(listOfProducts);
+    for(var i=0; i < listOfProducts.length; i++)  {
+        var mobileProduct = createMobileCard(listOfProducts[i]);
+        mobileTemplate.appendChild(mobileProduct);
+    }
+    document.body.appendChild(mobileTemplate);
 
-    // Add your code here, remember to brake your code in to smaller function blocks
-    // to reduce complexity and increase readability. Each function should have
-    // an explainetory comment like the one for this function, see row 22.
-    
-    // TODO: Remove the console.log and these comments when you've read them.
 }
+
+function createMobileCard(listOfProducts) {
+    var mobileProduct = document.createElement("div");
+    mobileProduct.className = "divMobileProduct";
+
+    var mobileName = document.createElement("h2")
+    mobileName.innerText = " " +listOfProducts.title;
+    mobileProduct.appendChild(mobileName);
+
+    var mobileName = document.createElement("p")
+    mobileName.innerText = " " +listOfProducts.description;
+    mobileProduct.appendChild(mobileName);
+
+    var mobileImage = document.createElement("img");
+    var imageName = "./assets/iPhoneX.png";
+    mobileImage.src = " " +listOfProducts.image;
+    mobileProduct.appendChild(mobileImage);
+
+    var mobileName = document.createElement("p")
+    mobileName.innerText = listOfProducts.price + " kr ";
+    mobileProduct.appendChild(mobileName);
+
+    var shoppingButton = document.createElement("button")
+    shoppingButton.className = "shoppingCartButton"
+    shoppingButton.onclick = clickME;
+    var shoppingCart = document.createElement("span")
+    shoppingCart.className = "fa fa-cart-arrow-down "
+    var shoppingCartText = document.createElement("span")
+    shoppingCartText.innerText = " Lägg till i kundvagnen"
+    mobileProduct.appendChild(shoppingButton)
+    shoppingButton.appendChild(shoppingCart)
+    shoppingButton.appendChild(shoppingCartText)
+    
+
+
+
+    return mobileProduct;
+}
+
+
+var clicks = 0;
+function clickME() {
+    clicks += 1;
+    document.getElementById("clicks").innerHTML = clicks;
+}
+

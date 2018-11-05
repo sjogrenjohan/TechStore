@@ -52,8 +52,8 @@ function createMobileCard(listOfProducts) {
     mobileName.innerText = listOfProducts.price + " kr ";
     mobileProduct.appendChild(mobileName);
 
-    var shoppingButton = document.createElement("div")
-    shoppingButton.className = "shoppingCartButton"
+    var shoppingButton = document.createElement("button")
+    shoppingButton.className = "shoppingCartButton clicks"
     var shoppingCart = document.createElement("span")
     shoppingCart.className = "fa fa-cart-arrow-down "
     var shoppingCartText = document.createElement("span")

@@ -53,11 +53,12 @@ function createMobileCard(listOfProducts) {
     mobileProduct.appendChild(mobileName);
 
     var shoppingButton = document.createElement("button")
-    shoppingButton.className = "shoppingCartButton clicks"
+    shoppingButton.className = "shoppingCartButton"
+    shoppingButton.onclick = clickME;
     var shoppingCart = document.createElement("span")
     shoppingCart.className = "fa fa-cart-arrow-down "
     var shoppingCartText = document.createElement("span")
-    shoppingCartText.innerText = " Lägg till i kundvagnen"
+    shoppingCartText.innerText = "Lägg till i kundvagnen"
     mobileProduct.appendChild(shoppingButton)
     shoppingButton.appendChild(shoppingCart)
     shoppingButton.appendChild(shoppingCartText)
@@ -74,3 +75,4 @@ function clickME() {
     clicks += 1;
     document.getElementById("clicks").innerHTML = clicks;
 }
+

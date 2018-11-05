@@ -16,6 +16,7 @@
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
+        padding-top: 3em;
     }
     
 
@@ -24,6 +25,5 @@
         background: white;
         width:100vw;
         height:100vh;
-        padding-top: 3em;
 }
 }

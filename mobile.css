@@ -30,6 +30,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    padding-top: 3em;
 }
 
 .divMobileProduct {
@@ -39,9 +40,8 @@ h3 {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    width:100vw;
-    height:100vh;
-    padding-top: 3em;
+    width: 1000vw;
+    height: 100vh;
 }
 
 .shoppingCartButton {

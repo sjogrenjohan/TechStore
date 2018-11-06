@@ -13,7 +13,7 @@ function loadProducts() {
         addProductsToWebpage();
     });
 }
-//Skapar en div för mobilprodukten på sidan
+//Skapar en div för mobilprodukten på sidanh
 var mobileTemplate = document.createElement("div");
 mobileTemplate.className = "mobileTemplateClass";
 
@@ -59,15 +59,14 @@ function createMobileCard(product) {
     var shoppingButton = document.createElement("button")
     shoppingButton.className = "shoppingCartButton"
     shoppingButton.onclick = clickME;
-    shoppingButton.setAttribute("data", product.title)
-    
-   
+    shoppingButton.setAttribute("data", listOfProducts.title)
+
     var shoppingCart = document.createElement("span")
     shoppingCart.className = "fa fa-cart-arrow-down "
-   
+
     var shoppingCartText = document.createElement("span")
     shoppingCartText.innerText = " Lägg till i kundvagnen"
-   
+
     mobileProduct.appendChild(shoppingButton)
 
     shoppingButton.appendChild(shoppingCart)

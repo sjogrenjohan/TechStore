@@ -3,6 +3,8 @@ TechStore
 
 Group project to create a similar website created by our teachers
 
+[Click me](https://sjogrenjohan.github.io/TechStore/)
+
 
 Design changes:
 

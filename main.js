@@ -18,6 +18,8 @@ mobileTemplate.className = "mobileTemplateClass";
 function initSite() {
     loadProducts();
     document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
+
+
 }
 
 
@@ -44,7 +46,6 @@ function createMobileCard(listOfProducts) {
     mobileProduct.appendChild(mobileName);
 
     var mobileImage = document.createElement("img");
-    var imageName = "./assets/iPhoneX.png";
     mobileImage.src = " " +listOfProducts.image;
     mobileProduct.appendChild(mobileImage);
 
@@ -72,12 +73,14 @@ function createMobileCard(listOfProducts) {
 
 
 function clickME() {
-    if(typeof(Storage) !== "undefined") {
+    if(typeof(Storage) !== "0") {
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount)+1;
         } else {
             localStorage.clickcount = 1;
         }
         document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
-    } 
+    } else {
+        document.getElementById("clicks").innerHTML = "Sorry, your browser does not support web storage...";
+    }
 }

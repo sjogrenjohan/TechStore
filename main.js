@@ -17,7 +17,7 @@ mobileTemplate.className = "mobileTemplateClass";
 
 function initSite() {
     loadProducts();
-    
+    document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
 }
 
 

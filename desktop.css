@@ -8,6 +8,7 @@
         width:18%;
         font-size: 18px;
         letter-spacing: 0.2px;
+        cursor: pointer;
     }
     
     .mobileTemplateClass {

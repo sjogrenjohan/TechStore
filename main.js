@@ -1,6 +1,6 @@
 var listOfProducts;
 
-/** Get products from the json file and store it in a global variable. Test*/
+/** Get products from the json file and store it in a global variable */
 function loadProducts() {
     fetch("./products.json")
     .then(function(response) {

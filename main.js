@@ -92,17 +92,33 @@ function clickME(product) {
     console.log(productArray)
     localStorage.productArray = productArray;
 
-
 }
 
 function shopingSite() {
-    loadProducts();
-    ulElement = document.createElement("ul");
-    for (var i = 0; i < productArray.length; i++) {
-        var liElement = document.createElement("li");
-        liElement.style.height = "5em";
-        liElement.style.backgroundColor = productArray[i];
-        ulElement.appendChild(liElement);
+    document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
+    sumOfALl();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function sumOfALl() {
+    var total = 0;
+    var listOfProducts = JSON.parse(localStorage.productArray);
+    console.log(listOfProducts)
+    for( var i = 0; i < listOfProducts.length; i++){
+        total += listOfProducts[i].price;
     }
-    document.body.appendChild(ulElement);
+    document.getElementById("sumOfAll").append(total)
+    console.log(total)
 }

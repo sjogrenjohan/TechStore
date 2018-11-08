@@ -1,14 +1,18 @@
+var listOfProducts = JSON.parse(localStorage.productArray);
+
 function shopingSite() {
     document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
     sumOfALl();
+    showShopingCart();
 }
 
 
 function showShopingCart() {
-    var listOfProducts = JSON.parse(localStorage.productArray);
-    for (var i = 0; i < listOfProducts.length;i++){
-        
-    }
+    for (i = 0; i < listOfProducts.length; i++) {
+        var mobileProduct = createMobileCard(listOfProducts[i]);
+        mobileTemplate.appendChild(mobileProduct);
+      }
+      document.body.appendChild(mobileTemplate);
 
 
 }
@@ -17,7 +21,7 @@ function showShopingCart() {
 /** Calculates total price of items in localStorage, the total price  */
 function sumOfALl() {
     var total = 0;
-    var listOfProducts = JSON.parse(localStorage.productArray);
+    console.log(listOfProducts)
     for( var i = 0; i < listOfProducts.length; i++){
         total += listOfProducts[i].price;
     }

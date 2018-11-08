@@ -1,6 +1,6 @@
 var listOfProducts;
 var productArray = JSON.stringify(cart);
-var cart = JSON.parse(localStorage.productArray);
+var cart = []
 
 /** Get products from the json file and store it in a global variable */
 function loadProducts() {

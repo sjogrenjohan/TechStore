@@ -58,8 +58,8 @@ function createMobileCard(product) {
 
     var shoppingButton = document.createElement("button")
     shoppingButton.className = "shoppingCartButton"
-    shoppingButton.onclick = clickME;
-    shoppingButton.setAttribute("data", product.title)
+    shoppingButton.onclick = clickME.bind(undefined, product);
+    
 
     var shoppingCart = document.createElement("span")
     shoppingCart.className = "fa fa-cart-arrow-down "
@@ -76,7 +76,7 @@ function createMobileCard(product) {
 }
 
 
-function clickME(element) {
+function clickME(product) {
     if(typeof(Storage) !== "0") {
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount)+1;
@@ -84,18 +84,13 @@ function clickME(element) {
             localStorage.clickcount = 1;
         }
         document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
-    } else {
-        document.getElementById("clicks").innerHTML = "Sorry, your browser does not support web storage...";
-    }
+    } 
     
-    var productTitle = element.setAttribute("data")
-
-    for(var i = 0; i < product.title; i++) {
-        if(productTitle == product[i].title) {
-            cart.push(product[i])
-        }
-    }
-
-    /* localStorage.setItem("data", shoppingButton.product.title); */
+    cart.push(product);
+    console.log(cart);
+    var productArray = JSON.stringify(cart);
+    console.log(productArray)
+    localStorage.productArray = productArray;
+    
 
 }

@@ -24,7 +24,6 @@ function initSite() {
 }
 
 
-
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
     console.log(listOfProducts);
@@ -75,7 +74,7 @@ function createMobileCard(product) {
     return mobileProduct;
 }
 
-
+/** Addes a clickcounter and addes items to localstorage */
 function clickME(product) {
     if(typeof(Storage) !== "0") {
         if (localStorage.clickcount) {
@@ -92,33 +91,4 @@ function clickME(product) {
     console.log(productArray)
     localStorage.productArray = productArray;
 
-}
-
-function shopingSite() {
-    document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
-    sumOfALl();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function sumOfALl() {
-    var total = 0;
-    var listOfProducts = JSON.parse(localStorage.productArray);
-    console.log(listOfProducts)
-    for( var i = 0; i < listOfProducts.length; i++){
-        total += listOfProducts[i].price;
-    }
-    document.getElementById("sumOfAll").append(total)
-    console.log(total)
 }

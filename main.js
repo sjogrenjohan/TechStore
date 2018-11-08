@@ -48,7 +48,9 @@ function createMobileCard(product) {
     mobileProduct.appendChild(mobileName);
 
     var mobileImage = document.createElement("img");
+
     mobileImage.src = " " +product.image;
+
     mobileProduct.appendChild(mobileImage);
 
     var mobileName = document.createElement("p")

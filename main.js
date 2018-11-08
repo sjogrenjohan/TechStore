@@ -59,7 +59,7 @@ function createMobileCard(product) {
     var shoppingButton = document.createElement("button")
     shoppingButton.className = "shoppingCartButton"
     shoppingButton.onclick = clickME;
-    shoppingButton.setAttribute("data", listOfProducts.title)
+    shoppingButton.setAttribute("data", product.title)
 
     var shoppingCart = document.createElement("span")
     shoppingCart.className = "fa fa-cart-arrow-down "

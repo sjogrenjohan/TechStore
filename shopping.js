@@ -6,7 +6,7 @@ function shopingSite() {
     showShopingCart();
 }
 
-
+        // Shows the localstorage, items// 
 function showShopingCart() {
     for (i = 0; i < listOfProducts.length; i++) {
         var mobileProduct = createMobileCard(listOfProducts[i]);

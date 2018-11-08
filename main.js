@@ -1,5 +1,5 @@
 var listOfProducts;
-
+var productArray = JSON.stringify(cart);
 var cart = []
 
 /** Get products from the json file and store it in a global variable */
@@ -91,6 +91,18 @@ function clickME(product) {
     var productArray = JSON.stringify(cart);
     console.log(productArray)
     localStorage.productArray = productArray;
-    
 
+
+}
+
+function shopingSite() {
+    loadProducts();
+    ulElement = document.createElement("ul");
+    for (var i = 0; i < productArray.length; i++) {
+        var liElement = document.createElement("li");
+        liElement.style.height = "5em";
+        liElement.style.backgroundColor = productArray[i];
+        ulElement.appendChild(liElement);
+    }
+    document.body.appendChild(ulElement);
 }

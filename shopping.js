@@ -3,8 +3,8 @@ var listOfProducts = JSON.parse(localStorage.productArray);
 function shopingSite() {
     document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
     sumOfAll();
-    showShopingCart();
     shoppingHeadline();
+    showShopingCart();
 }
 
 var shoppingTemplate = document.createElement("div");
@@ -25,15 +25,24 @@ function showShopingCart() {
 function shoppingHeadline() {
     var headlineContainer = document.createElement("div");
     headlineContainer.className = "headlineContainerClass";
-
-    var shoppingCartIcon = document.createElement("h1");
-    shoppingCartIcon.className = "fa fa-cart-arrow-down ";
+    
+    var shoppingCartIcon = document.createElement("span");
+    shoppingCartIcon.style.display = "inline-block";
+    shoppingCartIcon.className = "cartIcon fa fa-shopping-cart ";
     headlineContainer.appendChild(shoppingCartIcon);
+    
+    var headlineText = document.createElement("span");
+    headlineText.style.display = "inline-block";
+    
+    var shoppingHeadline = document.createElement("h1")
+    shoppingHeadline.className = "headlineShoppingCart";
+    shoppingHeadline.innerText =  "Kundvagn";
+    headlineText.appendChild(shoppingHeadline);
+    headlineContainer.appendChild(headlineText);
 
-    var shoppingHeadline = document.createElement("h1");
-    shoppingHeadline.innerText = "Kundvagn";
-    headlineContainer.appendChild(shoppingHeadline);
-
+    
+    
+    document.body.appendChild(headlineContainer);
 
     
 }

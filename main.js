@@ -13,7 +13,7 @@ function loadProducts() {
         addProductsToWebpage();
     });
 }
-//Skapar en div för mobilprodukten på sidanh
+//Skapar en "main-div" för mobilprodukten på sidan
 var mobileTemplate = document.createElement("div");
 mobileTemplate.className = "mobileTemplateClass";
 

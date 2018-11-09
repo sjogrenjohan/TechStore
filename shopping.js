@@ -2,7 +2,7 @@ var listOfProducts = JSON.parse(localStorage.productArray);
 
 function shopingSite() {
     document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
-    sumOfALl();
+    sumOfAll();
     showShopingCart();
     shoppingHeadline();
 }

@@ -23,16 +23,16 @@ function showShopingCart() {
 }
 
 function shoppingHeadline() {
-    var headlineContainer = document.createElement("div")
+    var headlineContainer = document.createElement("div");
     headlineContainer.className = "headlineContainerClass";
 
-    var shoppingCartIcon = document.createElement("span")
-    shoppingCartIcon.className = "shoppingCartIcon";
-    headlineContainer.appendChild(shoppingCartIcon)
+    var shoppingCartIcon = document.createElement("h1");
+    shoppingCartIcon.className = "fa fa-cart-arrow-down ";
+    headlineContainer.appendChild(shoppingCartIcon);
 
-    var shoppingHeadline = document.createElement("h1")
+    var shoppingHeadline = document.createElement("h1");
     shoppingHeadline.innerText = "Kundvagn";
-    headlineContainer.appendChild(shoppingHeadline)
+    headlineContainer.appendChild(shoppingHeadline);
 
 
     
@@ -65,7 +65,7 @@ function createShopingCart(product) {
     
 
     var shoppingCart = document.createElement("span")
-    shoppingCart.className = "fa fa-cart-arrow-down ";
+    shoppingCart.className = "fa fa-trash-o ";
 
     var shoppingCartText = document.createElement("span")
     shoppingCartText.className = "removeButtonText";

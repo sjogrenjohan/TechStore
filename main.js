@@ -34,7 +34,7 @@ function addProductsToWebpage() {
     document.body.appendChild(mobileTemplate);
 
 }
-
+    // Change the card layout for shopping card // 
 function createMobileCard(product) {
     var mobileProduct = document.createElement("div");
     mobileProduct.className = "divMobileProduct";
@@ -69,7 +69,6 @@ function createMobileCard(product) {
     shoppingCartText.innerText = " Lägg till i kundvagnen"
 
     mobileProduct.appendChild(shoppingButton)
-
     shoppingButton.appendChild(shoppingCart)
     shoppingButton.appendChild(shoppingCartText)
 

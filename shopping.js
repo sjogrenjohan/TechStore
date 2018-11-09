@@ -21,7 +21,7 @@ function showShopingCart() {
 
 
 }
-
+    //Creates the headline
 function shoppingHeadline() {
     var headlineContainer = document.createElement("div");
     headlineContainer.className = "headlineContainerClass";
@@ -78,10 +78,6 @@ function createShopingCart(product) {
 
     return mobileProduct;
 }
-
-
-
-
 
 
 // Calculates total price of items in localStorage, the total price  //

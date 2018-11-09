@@ -15,6 +15,10 @@ p {
     
 }
 
+h1 {
+    font-family: 'Oswald', sans-serif;
+}
+
 h3 {
     font-family: 'Krub', sans-serif;
     font-size: 26px;
@@ -30,7 +34,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 3em;
+    padding-top: 6em;
 }
 
 .divMobileProduct {
@@ -40,7 +44,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    width: 1000vw;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -53,4 +57,121 @@ h3 {
     font-size: 18px;
     letter-spacing: 0.2px;
     border-style: none;
+}
+.navbar-brand   {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-item .fa-shopping-cart  {
+    cursor: pointer;
+}
+
+/* Kundvagns CSS */
+
+.shoppingTemplateClass {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.headlineContainerClass {
+    padding-top: 6em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.divShoppingProduct {
+    background-color: #f5f5f5;
+    border: 2px solid #5596F5;
+    border-radius: 0.6em;
+    margin: 0.7em;
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.removeProductButton {
+    background-color: #E64E4E;
+    border-radius: 0.4em;
+    padding: 0.6em;
+    color: white;
+    width: 100%;
+    
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    border-style: none;
+    align-items: center;
+}
+
+/* cartPage images */
+.shoppingImages {
+    border-radius: 8px;
+    width: 6em;
+    height: 9em;
+}
+
+/* cartPage text for prices */
+.priceText {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    margin-top: 0;
+}
+
+/* cartPage text for product title */
+.titleText {
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 0;
+}
+
+ /* Headline icon for cartPage */
+.cartIcon {
+    font-size: 2.5em;
+    padding-right: 0.2em;
+}
+
+
+/* DIV for confirm order and total price */
+.confirmOrderClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Button for confirm */
+
+.confirmButtonClass {
+    margin-top: 1em;
+    background: #5596F5;
+    border-radius: 0.4em;
+    padding: 0.6em;
+    color: white;
+
+    width: 10em;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    border-style: none;
+}
+
+/* Check icon for button */
+
+.confirmIcon {
+    padding-right: 0.5em;
+}
+
+#sumOfAll {
+    font-size: 1.5em;
 }

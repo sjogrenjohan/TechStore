@@ -26,4 +26,13 @@
         width:100vw;
         height:100vh;
     }
+    .navbar-brand   {
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .nav-item .fa-shopping-cart  {
+        cursor: pointer;
+    }
 }

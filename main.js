@@ -1,6 +1,5 @@
 var listOfProducts;
-var productArray = JSON.stringify(cart);
-var cart = []
+var shoppingCart;
 
 /** Get products from the json file and store it in a global variable */
 function loadProducts() {
@@ -18,7 +17,9 @@ var mobileTemplate = document.createElement("div");
 mobileTemplate.className = "mobileTemplateClass";
 
 function initSite() {
+    shoppingCart = JSON.parse(localStorage.getItem("productArray"));
     loadProducts();
+    document.getElementById("clicks").innerHTML = shoppingCart.length;
 }
 
 
@@ -73,12 +74,17 @@ function addProductsToWebpage() {
     return mobileProduct;
 }
 
-/** Addes a clickcounter and addes items to localstorage */
-function addToCart(product) {
-    cart.push(product);
-    var productArray = JSON.stringify(cart);
-    localStorage.productArray = productArray;
-    var shoppingProducts = JSON.parse(localStorage.productArray);
-    document.getElementById("clicks").innerHTML = " " + shoppingProducts.length + "";
 
+/** Addes a clickcounter and addes items to localstorage */
+    function addToCart(product) {
+     if (!shoppingCart) {
+         shoppingCart = [product];
+     }else {
+
+         shoppingCart.push(product);
+     }
+     
+    var productArray = JSON.stringify(shoppingCart);
+    localStorage.productArray = productArray;
+    document.getElementById("clicks").innerHTML = shoppingCart.length;
 }

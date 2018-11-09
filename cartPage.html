@@ -20,12 +20,11 @@
 
         <!-- Google Font-style -->
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-        
+        <script src="./shopping.js"></script>
         <script src="./main.js"></script>
     </head>
-    <body onload="initSite()">
+    <body onload="shopingSite()">
         <header>
-
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" style="color: #FFFFFF;">
                 <a class="navbar-brand" onclick="location.href = './index.html'">TechStore</a>  
                 <ul class="navbar-nav ml-auto">
@@ -34,11 +33,12 @@
                         <a class="fa fa-shopping-cart ml-auto" onclick="location.href = './cartPage.html'" style="font-size:28px;"></a>
                     </li>    
                 </ul>
-
             </nav>
         </header>
 
-        <main>
+        <main >
+                <!-- <h1><i class="fa fa-shopping-cart"></i> Kundvagn</h1> -->
+            <button id="sumOfAll"> Summan av allt : </button>
         </main>
 
     </body>

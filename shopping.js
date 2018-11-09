@@ -2,9 +2,10 @@ var shoppingProducts = JSON.parse(localStorage.productArray);
 
 function shopingSite() {
     document.getElementById("clicks").innerHTML = " " + shoppingProducts.length + "";
-    sumOfAll();
     shoppingHeadline();
     showShopingCart();
+    confirmOrder();
+    sumOfAll();
 }
 
 var shoppingTemplate = document.createElement("div");
@@ -88,6 +89,32 @@ function createShopingCart(product) {
     return mobileProduct;
 }
 
+//Creates an element with total price and a button to confirm the order
+
+function confirmOrder() {
+    var totalConfirm = document.createElement("div");
+    totalConfirm.className = "confirmOrderClass";
+
+    var totalPrice = document.createElement("p")
+    totalPrice.id = "sumOfAll";
+    totalPrice.innerText = "Totalt pris: "
+    totalConfirm.appendChild(totalPrice)
+    
+    var confirmButton = document.createElement("button");
+    confirmButton.className ="confirmButtonClass";
+    totalConfirm.appendChild(confirmButton)
+
+    var confirmIcon = document.createElement("span");
+    confirmIcon.className = "confirmIcon fa fa-check";
+    confirmButton.appendChild(confirmIcon);
+
+    var confirmText = document.createElement("span");
+    confirmText.innerText = "Slutför ditt köp";
+    confirmButton.appendChild(confirmText)
+    
+    document.body.appendChild(totalConfirm);
+}
+
 
 // Calculates total price of items in localStorage, the total price  //
 function sumOfAll() {
@@ -95,6 +122,6 @@ function sumOfAll() {
     for( var i = 0; i < shoppingProducts.length; i++){
         total += shoppingProducts[i].price;
     }
-    document.getElementById("sumOfAll").append(total)
+    document.getElementById("sumOfAll").append(total + " kr")
   
 }

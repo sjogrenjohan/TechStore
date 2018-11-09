@@ -59,7 +59,7 @@ function createMobileCard(product) {
 
     var shoppingButton = document.createElement("button")
     shoppingButton.className = "shoppingCartButton"
-    shoppingButton.onclick = clickME.bind(undefined, product);
+    shoppingButton.onclick = addToCart.bind(undefined, product);
     
 
     var shoppingCart = document.createElement("span")
@@ -76,7 +76,7 @@ function createMobileCard(product) {
 }
 
 /** Addes a clickcounter and addes items to localstorage */
-function clickME(product) {
+function addToCart(product) {
     if(typeof(Storage) !== "0") {
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount)+1;

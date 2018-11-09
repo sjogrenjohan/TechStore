@@ -81,7 +81,7 @@ function createShopingCart(product) {
 
 
 // Calculates total price of items in localStorage, the total price  //
-function sumOfALl() {
+function sumOfAll() {
     var total = 0;
     for( var i = 0; i < listOfProducts.length; i++){
         total += listOfProducts[i].price;

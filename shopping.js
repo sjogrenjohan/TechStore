@@ -1,7 +1,7 @@
-var listOfProducts = JSON.parse(localStorage.productArray);
+var shoppingProducts = JSON.parse(localStorage.productArray);
 
 function shopingSite() {
-    document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
+    document.getElementById("clicks").innerHTML = " " + shoppingProducts.length + "";
     sumOfAll();
     shoppingHeadline();
     showShopingCart();
@@ -12,9 +12,9 @@ shoppingTemplate.className = "shoppingTemplateClass";
 
 
         // Shows the localstorage, items// 
-function showShopingCart() {
-    for (i = 0; i < listOfProducts.length; i++) {
-        var mobileProduct = createShopingCart(listOfProducts[i]);
+    function showShopingCart() {
+    for (i = 0; i < shoppingProducts.length; i++) {
+        var mobileProduct = createShopingCart(shoppingProducts[i]);
         shoppingTemplate.appendChild(mobileProduct);
       }
       document.body.appendChild(shoppingTemplate);
@@ -92,8 +92,8 @@ function createShopingCart(product) {
 // Calculates total price of items in localStorage, the total price  //
 function sumOfAll() {
     var total = 0;
-    for( var i = 0; i < listOfProducts.length; i++){
-        total += listOfProducts[i].price;
+    for( var i = 0; i < shoppingProducts.length; i++){
+        total += shoppingProducts[i].price;
     }
     document.getElementById("sumOfAll").append(total)
   

@@ -19,8 +19,6 @@ mobileTemplate.className = "mobileTemplateClass";
 
 function initSite() {
     loadProducts();
-    document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
-
 }
 
 
@@ -35,7 +33,7 @@ function addProductsToWebpage() {
 
 }
     // Change the card layout for shopping card // 
-function createMobileCard(product) {
+    function createMobileCard(product) {
     var mobileProduct = document.createElement("div");
     mobileProduct.className = "divMobileProduct";
 
@@ -77,19 +75,10 @@ function createMobileCard(product) {
 
 /** Addes a clickcounter and addes items to localstorage */
 function addToCart(product) {
-    if(typeof(Storage) !== "0") {
-        if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)+1;
-        } else {
-            localStorage.clickcount = 1;
-        }
-        document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
-    } 
-    
     cart.push(product);
-    console.log(cart);
     var productArray = JSON.stringify(cart);
-    console.log(productArray)
     localStorage.productArray = productArray;
+    var shoppingProducts = JSON.parse(localStorage.productArray);
+    document.getElementById("clicks").innerHTML = " " + shoppingProducts.length + "";
 
 }

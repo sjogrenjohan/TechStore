@@ -61,7 +61,7 @@ function createShopingCart(product) {
 
     var shoppingButton = document.createElement("button")
     shoppingButton.className = "removeProductButton";
-    shoppingButton.onclick = clickME.bind(undefined, product);
+    shoppingButton.onclick = addToCart.bind(undefined, product);
     
 
     var shoppingCart = document.createElement("span")

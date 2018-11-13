@@ -175,3 +175,19 @@ h3 {
 #sumOfAll {
     font-size: 1.5em;
 }
+
+.loginDiv {
+    padding-top: 6em;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.userPlate {
+    padding-right: 0.5em;
+    font-size: 22px;
+    cursor: pointer;
+}

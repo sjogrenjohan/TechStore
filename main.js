@@ -1,6 +1,5 @@
 var listOfProducts;
-var productArray = JSON.stringify(cart);
-var cart = []
+var shoppingCart;
 
 /** Get products from the json file and store it in a global variable */
 function loadProducts() {
@@ -18,9 +17,9 @@ var mobileTemplate = document.createElement("div");
 mobileTemplate.className = "mobileTemplateClass";
 
 function initSite() {
+    shoppingCart = JSON.parse(localStorage.getItem("productArray"));
     loadProducts();
-    document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
-
+    document.getElementById("clicks").innerHTML = shoppingCart.length;
 }
 
 
@@ -34,8 +33,8 @@ function addProductsToWebpage() {
     document.body.appendChild(mobileTemplate);
 
 }
-
-function createMobileCard(product) {
+    // Change the card layout for shopping card // 
+    function createMobileCard(product) {
     var mobileProduct = document.createElement("div");
     mobileProduct.className = "divMobileProduct";
 
@@ -59,7 +58,7 @@ function createMobileCard(product) {
 
     var shoppingButton = document.createElement("button")
     shoppingButton.className = "shoppingCartButton"
-    shoppingButton.onclick = clickME.bind(undefined, product);
+    shoppingButton.onclick = addToCart.bind(undefined, product);
     
 
     var shoppingCart = document.createElement("span")
@@ -69,28 +68,23 @@ function createMobileCard(product) {
     shoppingCartText.innerText = " Lägg till i kundvagnen"
 
     mobileProduct.appendChild(shoppingButton)
-
     shoppingButton.appendChild(shoppingCart)
     shoppingButton.appendChild(shoppingCartText)
 
     return mobileProduct;
 }
 
-/** Addes a clickcounter and addes items to localstorage */
-function clickME(product) {
-    if(typeof(Storage) !== "0") {
-        if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)+1;
-        } else {
-            localStorage.clickcount = 1;
-        }
-        document.getElementById("clicks").innerHTML = " " + localStorage.clickcount + "";
-    } 
-    
-    cart.push(product);
-    console.log(cart);
-    var productArray = JSON.stringify(cart);
-    console.log(productArray)
-    localStorage.productArray = productArray;
 
+/** Addes a clickcounter and addes items to localstorage */
+    function addToCart(product) {
+     if (!shoppingCart) {
+         shoppingCart = [product];
+     }else {
+
+         shoppingCart.push(product);
+     }
+     
+    var productArray = JSON.stringify(shoppingCart);
+    localStorage.productArray = productArray;
+    document.getElementById("clicks").innerHTML = shoppingCart.length;
 }

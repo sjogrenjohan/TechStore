@@ -120,6 +120,7 @@ function confirmOrder() {
 
 // Calculates total price of items in localStorage, the total price  //
 function sumOfAll() {
+
     var total = 0;
     for( var i = 0; i < shoppingProducts.length; i++){
         total += shoppingProducts[i].price;
@@ -136,7 +137,7 @@ function removeCart(index) {
     document.getElementById("clicks").innerHTML = " " + shoppingProducts.length + "";
     var childToRemove = shoppingTemplate.children[index]
     shoppingTemplate.removeChild(childToRemove)
-    
+    document.getElementById("sumOfAll").innerHTML = "Totalt pris: "
     sumOfAll()
    
 }

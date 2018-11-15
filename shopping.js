@@ -105,6 +105,9 @@ function confirmOrder() {
     var confirmButton = document.createElement("button");
     confirmButton.className ="confirmButtonClass";
     totalConfirm.appendChild(confirmButton)
+    confirmButton.onclick = function(){
+        confirmBuy()
+      };
 
     var confirmIcon = document.createElement("span");
     confirmIcon.className = "confirmIcon fa fa-check";
@@ -140,4 +143,10 @@ function removeCart(index) {
     document.getElementById("sumOfAll").innerHTML = "Totalt pris: "
     sumOfAll()
    
+}
+
+
+function confirmBuy(){
+    alert('Tack för ditt köp');
+
 }

@@ -17,8 +17,8 @@ var mobileTemplate = document.createElement("div");
 mobileTemplate.className = "mobileTemplateClass";
 
 function initSite() {
-    shoppingCart = JSON.parse(localStorage.getItem("productArray")); //TODO check for undefined
     loadProducts();
+    shoppingCart = JSON.parse(localStorage.getItem("productArray")); //TODO check for undefined
     document.getElementById("clicks").innerHTML = shoppingCart.length;
 }
 

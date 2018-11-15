@@ -1,7 +1,7 @@
 var shoppingProducts = JSON.parse(localStorage.productArray);
 
 function shopingSite() {
-    document.getElementById("clicks").innerHTML = " " + shoppingProducts.length + "";
+    document.getElementById("clicks").innerHTML = shoppingProducts.length;
     shoppingHeadline();
     showShopingCart();
     confirmOrder();
@@ -137,16 +137,21 @@ function removeCart(index) {
     shoppingProducts.splice(index,1)
     var productArray = JSON.stringify(shoppingProducts);
     localStorage.productArray = productArray;
-    document.getElementById("clicks").innerHTML = " " + shoppingProducts.length + "";
+    document.getElementById("clicks").innerHTML = shoppingProducts.length;
     var childToRemove = shoppingTemplate.children[index]
     shoppingTemplate.removeChild(childToRemove)
     document.getElementById("sumOfAll").innerHTML = "Totalt pris: "
     sumOfAll()
+ 
    
 }
 
 
 function confirmBuy(){
     alert('Tack för ditt köp');
-
+    var productArray = JSON.stringify(shoppingProducts);
+    productArray = [];
+    localStorage.productArray = productArray;
+    window.location = "/cartPage.html"
+    
 }

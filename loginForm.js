@@ -4,10 +4,6 @@ function remember() {
     document.getElementById("clicks").innerHTML = " " + shoppingProducts.length + "";
 }
 
-
-
-
-
 // storing input from register-form
 function store() {
     // Name and Password from the register-form
@@ -24,15 +20,14 @@ function store() {
     else {
         userAccounts.push(newUser)
     }
-    console.log(userAccounts)
     
     localStorage.setItem("userAccounts", JSON.stringify(userAccounts))
-
 }
 
 // check if stored data from register-form is equal to entered data in the   login-form
 function check() {
 
+    //Retrieve user login details from local storage
     var userAccounts = JSON.parse(localStorage.getItem("userAccounts"));
 
     // entered data from the login-form
@@ -43,7 +38,8 @@ function check() {
     for(var i = 0; i < userAccounts.length; i++) {
         console.log(inputName, inputPassword)
         if(userAccounts[i].userName == inputName.value && userAccounts[i].userPassword == inputPassword.value) {
-            window.location.href = "/userPage.html"
+
+            window.location.href = "/userPage.html";
             alert('You are logged in.');
             break
         }

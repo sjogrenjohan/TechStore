@@ -43,10 +43,11 @@ function check() {
     for(var i = 0; i < userAccounts.length; i++) {
         console.log(inputName, inputPassword)
         if(userAccounts[i].userName == inputName.value && userAccounts[i].userPassword == inputPassword.value) {
-            window.location.href = "userLoggedIn.html"
+            window.location.href = "/userPage.html"
             alert('You are logged in.');
             break
         }
     }
     
 }
+

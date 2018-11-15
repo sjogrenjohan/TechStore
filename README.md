@@ -6,7 +6,7 @@ Group project to create a similar website created by our teachers
 [Click me](https://sjogrenjohan.github.io/TechStore/)
 
 
-Design changes:
+Design and feature changes:
 
 FONT
 * Changed the font style for a more modern and lean style

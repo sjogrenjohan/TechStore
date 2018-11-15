@@ -12,13 +12,15 @@ var shoppingTemplate = document.createElement("div");
 shoppingTemplate.className = "shoppingTemplateClass";
 
 
-        // Shows the localstorage, items// 
-    function showShopingCart() {
+// Shows the localstorage, items// 
+function showShopingCart() {
+
     for (i = 0; i < shoppingProducts.length; i++) {
-        var mobileProduct = createShopingCart(shoppingProducts[i]);
+        var mobileProduct = createShopingCart(shoppingProducts[i], i);
         shoppingTemplate.appendChild(mobileProduct);
       }
       document.body.appendChild(shoppingTemplate);
+     
 
 
 }
@@ -49,7 +51,7 @@ function shoppingHeadline() {
 }
 
         // Change the card layout for shopping card // 
-function createShopingCart(product) {
+function createShopingCart(product, index) {
     var mobileProduct = document.createElement("div");
     mobileProduct.className = "divShoppingProduct";
     
@@ -71,7 +73,7 @@ function createShopingCart(product) {
 
     var shoppingButton = document.createElement("button")
     shoppingButton.className = "removeProductButton";
-    shoppingButton.onclick = addToCart.bind(undefined, product);
+    shoppingButton.onclick = removeCart.bind(undefined, index);
     
 
     var shoppingCart = document.createElement("span")
@@ -118,10 +120,24 @@ function confirmOrder() {
 
 // Calculates total price of items in localStorage, the total price  //
 function sumOfAll() {
+
     var total = 0;
     for( var i = 0; i < shoppingProducts.length; i++){
         total += shoppingProducts[i].price;
     }
     document.getElementById("sumOfAll").append(total + " kr")
   
+}
+
+function removeCart(index) {
+
+    shoppingProducts.splice(index,1)
+    var productArray = JSON.stringify(shoppingProducts);
+    localStorage.productArray = productArray;
+    document.getElementById("clicks").innerHTML = " " + shoppingProducts.length + "";
+    var childToRemove = shoppingTemplate.children[index]
+    shoppingTemplate.removeChild(childToRemove)
+    document.getElementById("sumOfAll").innerHTML = "Totalt pris: "
+    sumOfAll()
+   
 }

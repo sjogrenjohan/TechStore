@@ -4,7 +4,7 @@
         background: #5596F5;
         border-radius: 0.4em;
         padding: 0.6em;
-        color: white;
+        color: #ffffff;
         width:18%;
         font-size: 18px;
         letter-spacing: 0.2px;
@@ -23,7 +23,8 @@
 
     .divMobileProduct {
         text-align: center;
-        background: white;
+        background: #ffffff;
+        background-image: linear-gradient( #ffffff, #f5f5f5);
         width:100vw;
         height:100vh;
     }

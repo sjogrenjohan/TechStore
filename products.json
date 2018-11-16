@@ -19,5 +19,36 @@
         "description": "Super nice and beautiful smartphone from LG.",
         "image": "./assets/LGV30.png",
         "price": 7495
+    },{
+        "title": "Sony Xperia XZ3",
+        "description": "Sony displays why its smartphones can be great again.",
+        "image": "./assets/SonyXperiaXZ3.png",
+        "price": 7995
+    },{
+        "title": "Nokia 8 Sirocco",
+        "description": "There's no doubt this is one of the most stylish Nokia phones to date.",
+        "image": "./assets/Nokia8Sirocco.png",
+        "price": 7990
+    },{
+        "title": "Huawei P20 Pro",
+        "description": "HUAWEI P20 Pro is once again leading the way with the revolutionary Leica Triple Camera.",
+        "image": "./assets/HuaweiP20Pro.png",
+        "price": 5995
+    },{
+        "title": "Xiaomi Mi 8",
+        "description": "Mi 8 is the first ever smart phone equipped with dual-frequency GPS.",
+        "image": "./assets/XiamiMi8.png",
+        "price": 4990
+    },{
+        "title": "Motorola Moto Z2 Force",
+        "description": "If you haven't used a Moto Z phone before, you'll be surprised by this hardware quality.",
+        "image": "./assets/MotorolaMotoZ2Force.png",
+        "price": 4990
+    },{
+        "title": "HTC U12+",
+        "description": "HTC’S camera continues to be one of the best on market",
+        "image": "./assets/HTC_U12plus.png",
+        "price": 8590
     }
+
 ]

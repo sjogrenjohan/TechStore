@@ -7,7 +7,6 @@ function remember() {
     
     //User logged in
     var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-    console.log(loggedInUser);
 
     if(loggedInUser) {
         window.location.href = "userPage.html";
@@ -66,7 +65,7 @@ function check() {
 
 function logout() {
     localStorage.removeItem("loggedInUser");
-    window.location.reload();
+    window.location.href = "/index.html";
 }
 
 

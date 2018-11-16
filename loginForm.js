@@ -29,21 +29,32 @@ function check() {
 
     //Retrieve user login details from local storage
     var userAccounts = JSON.parse(localStorage.getItem("userAccounts"));
-
+    
     // entered data from the login-form
     var inputName = document.getElementById('userName');
     var inputPassword = document.getElementById('userPassword');
-
+    
     // check if stored data from register-form is equal to data from login form
     for(var i = 0; i < userAccounts.length; i++) {
-        console.log(inputName, inputPassword)
         if(userAccounts[i].userName == inputName.value && userAccounts[i].userPassword == inputPassword.value) {
+            localStorage.setItem("loggedInUser", JSON.stringify(userAccounts[i]))
+           
+            window.location.href = "userPage.html";
 
-            window.location.href = "/userPage.html";
-            alert('You are logged in.');
-            break
+            var userIcon = document.getElementById("userIcon");
+            userIcon.href = "userPage.html";
+
+            var userDetails = document.getElementById("user");
+            userDetails.innerText = "" + userName.value;
+        
+        } else {
+            alert('Fel användarnamn eller lösenord');
         }
     }
     
 }
+
+
+
+
 

@@ -120,7 +120,7 @@ h3 {
 /* cartPage images */
 .shoppingImages {
     border-radius: 8px;
-    width: 6em;
+    width: auto;
     height: 9em;
 }
 
@@ -193,4 +193,18 @@ h3 {
     padding-right: 0.5em;
     font-size: 22px;
     cursor: pointer;
+}
+
+#userIcon {
+    color: white;
+}
+
+.userPageDiv {
+    padding-top: 6em;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
 }

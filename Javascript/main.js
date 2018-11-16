@@ -3,7 +3,7 @@ var shoppingCart;
 
 /** Get products from the json file and store it in a global variable */
 function loadProducts() {
-    fetch("./products.json")
+    fetch("./JSON/products.json")
     .then(function(response) {
         return response.json();
     })
@@ -20,12 +20,30 @@ function initSite() {
     loadProducts();
     shoppingCart = JSON.parse(localStorage.getItem("productArray")); //TODO check for undefined
     document.getElementById("clicks").innerHTML = shoppingCart.length;
+
+    //User logged in
+    var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    
+    if(loggedInUser) {
+        //Makes your username visible at the navbar when logged in
+        var userDetails = document.getElementById("user");
+        userDetails.innerText = "" + loggedInUser.userName;
+
+        //When logged in the icon directs you to userPage
+        var iconLink = document.getElementById("userIcon");
+        iconLink.href = "/userPage.html";
+        
+    } else {
+        var logOutButton = document.getElementById("logOut");
+        logOutButton.style.display = "none"
+    }
+    
+    
 }
 
 
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
-    console.log(listOfProducts);
     for(var i=0; i < listOfProducts.length; i++)  {
         var mobileProduct = createMobileCard(listOfProducts[i]);
         mobileTemplate.appendChild(mobileProduct);

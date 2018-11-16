@@ -1,7 +1,17 @@
 var shoppingProducts = JSON.parse(localStorage.productArray);
 
 function remember() {
+    
+    //Shopping cart
     document.getElementById("clicks").innerHTML = " " + shoppingProducts.length + "";
+    
+    //User logged in
+    var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+    if(loggedInUser) {
+        window.location.href = "userPage.html";
+    }
+
 }
 
 // storing input from register-form
@@ -38,21 +48,26 @@ function check() {
     for(var i = 0; i < userAccounts.length; i++) {
         if(userAccounts[i].userName == inputName.value && userAccounts[i].userPassword == inputPassword.value) {
             localStorage.setItem("loggedInUser", JSON.stringify(userAccounts[i]))
-           
-            window.location.href = "userPage.html";
 
-            var userIcon = document.getElementById("userIcon");
-            userIcon.href = "userPage.html";
-
+            //Makes your username visible at the navbar when logged in
             var userDetails = document.getElementById("user");
-            userDetails.innerText = "" + userName.value;
-        
+            userDetails.innerText = "" + userAccounts[i].userName;
+
+            window.location.href = "userPage.html";
+            
+            
         } else {
             alert('Fel användarnamn eller lösenord');
         }
     }
     
 }
+
+function logout() {
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "/index.html";
+}
+
 
 
 

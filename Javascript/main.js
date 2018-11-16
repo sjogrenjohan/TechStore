@@ -3,7 +3,7 @@ var shoppingCart;
 
 /** Get products from the json file and store it in a global variable */
 function loadProducts() {
-    fetch("./products.json")
+    fetch("./JSON/products.json")
     .then(function(response) {
         return response.json();
     })

@@ -1,7 +1,7 @@
 var shoppingProducts = JSON.parse(localStorage.productArray);
 
 function shopingSite() {
-    document.getElementById("clicks").innerHTML = " " + shoppingProducts.length + "";
+    document.getElementById("clicks").innerHTML = shoppingProducts.length;
     shoppingHeadline();
     showShopingCart();
     confirmOrder();
@@ -105,6 +105,9 @@ function confirmOrder() {
     var confirmButton = document.createElement("button");
     confirmButton.className ="confirmButtonClass";
     totalConfirm.appendChild(confirmButton)
+    confirmButton.onclick = function(){
+        confirmBuy()
+      };
 
     var confirmIcon = document.createElement("span");
     confirmIcon.className = "confirmIcon fa fa-check";
@@ -134,10 +137,21 @@ function removeCart(index) {
     shoppingProducts.splice(index,1)
     var productArray = JSON.stringify(shoppingProducts);
     localStorage.productArray = productArray;
-    document.getElementById("clicks").innerHTML = " " + shoppingProducts.length + "";
+    document.getElementById("clicks").innerHTML = shoppingProducts.length;
     var childToRemove = shoppingTemplate.children[index]
     shoppingTemplate.removeChild(childToRemove)
     document.getElementById("sumOfAll").innerHTML = "Totalt pris: "
     sumOfAll()
+ 
    
+}
+
+
+function confirmBuy(){
+    alert('Tack för ditt köp');
+    shoppingProducts.splice(0,shoppingProducts.length)
+    var productArray = JSON.stringify(shoppingProducts);
+    localStorage.productArray = productArray;
+    window.location = "/cartPage.html"
+    
 }

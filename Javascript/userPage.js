@@ -1,6 +1,11 @@
-   function initUserPage() {
-       
-       //User logged in
+   
+   
+    function initUserPage() {
+        
+        //Shopping cart numbers
+        document.getElementById("clicks").innerHTML = shoppingProducts.length;
+        
+        //User logged in
        var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
        console.log(loggedInUser);
        

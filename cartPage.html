@@ -30,9 +30,11 @@
                 <a class="navbar-brand" onclick="location.href = './index.html'">TechStore</a>  
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <i class="userPlate fa fa-user-circle" aria-hidden="true" onclick="location.href = './login.html'"></i> 
+                        <span id="user" class="navbar-text"></span>   
+                        <a id="userIcon" href="./login.html"><i class="userPlate fa fa-user-circle" aria-hidden="true"></i></a>
                         <a id="clicks" class="ml-auto">0</a>             
                         <a class="fa fa-shopping-cart ml-auto" onclick="location.href = './cartPage.html'" style="font-size:28px;"></a>
+                        <button id="logOut" class="btn btn-dark" onclick="logout()">Logga ut</button>
                     </li>    
                 </ul>
             </nav>

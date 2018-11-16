@@ -20,6 +20,26 @@ function initSite() {
     loadProducts();
     shoppingCart = JSON.parse(localStorage.getItem("productArray")); //TODO check for undefined
     document.getElementById("clicks").innerHTML = shoppingCart.length;
+
+    //User logged in
+    var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    console.log(loggedInUser);
+    
+    if(loggedInUser) {
+        //Makes your username visible at the navbar when logged in
+        var userDetails = document.getElementById("user");
+        userDetails.innerText = "" + loggedInUser.userName;
+
+        //When logged in the icon directs you to userPage
+        var iconLink = document.getElementById("userIcon");
+        iconLink.href = "/userPage.html";
+        
+    } else {
+        var logOutButton = document.getElementById("logOut");
+        logOutButton.style.display = "none"
+    }
+    
+    
 }
 
 

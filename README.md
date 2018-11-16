@@ -22,4 +22,7 @@ ADDED PAGE FOR USER LOGIN/REGISTRATION
 * Added a log out button at the user page
 * When logged in username is displayed in the navbar
 
+EXPANDED PRODUCTS
+* Added six more products to the store
+
 

@@ -120,7 +120,7 @@ h3 {
 /* cartPage images */
 .shoppingImages {
     border-radius: 8px;
-    width: 6em;
+    width: auto;
     height: 9em;
 }
 

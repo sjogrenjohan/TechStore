@@ -37,7 +37,8 @@ function initSite() {
         var logOutButton = document.getElementById("logOut");
         logOutButton.style.display = "none"
     }
-    
+    localStorage.setItem("userAccounts", JSON.stringify(userAccounts))
+
     
 }
 

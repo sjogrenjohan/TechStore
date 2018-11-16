@@ -10,7 +10,6 @@ function shopingSite() {
     sumOfAll();
     //User logged in
     var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-    console.log(loggedInUser);
     
     if(loggedInUser) {
         //Makes your username visible at the navbar when logged in
@@ -69,7 +68,6 @@ function shoppingHeadline() {
 function createShopingCart(product, index) {
     var mobileProduct = document.createElement("div");
     mobileProduct.className = "divShoppingProduct";
-    
     
     var mobileImage = document.createElement("img");
     mobileImage.className = "shoppingImages"
@@ -163,10 +161,30 @@ function removeCart(index) {
 
 
 function confirmBuy(){
+    
+    //Saves the order history to the logged in user
+
+    var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    var order = {
+        user: loggedInUser.userName,
+        date: new Date(),
+        products: JSON.parse(localStorage.getItem("productArray"))
+    }
+    var orders = JSON.parse(localStorage.getItem("orders"));
+    if(!orders) {
+        orders = [order];
+    }
+    else {
+        orders.push(order);
+    }
+
+    
+    localStorage.setItem("orders", JSON.stringify(orders));
     alert('Tack för ditt köp');
-    shoppingProducts.splice(0,shoppingProducts.length)
+
+    //Clears the shopping cart when confirming 
+    shoppingProducts.splice(0,shoppingProducts.length);
     var productArray = JSON.stringify(shoppingProducts);
     localStorage.productArray = productArray;
-    window.location = "/cartPage.html"
-    
+    window.location = "/cartPage.html";
 }

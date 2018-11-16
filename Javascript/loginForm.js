@@ -47,6 +47,7 @@ function check() {
     // check if stored data from register-form is equal to data from login form
     for(var i = 0; i < userAccounts.length; i++) {
         if(userAccounts[i].userName == inputName.value && userAccounts[i].userPassword == inputPassword.value) {
+            //Creates an array for a logged in user
             localStorage.setItem("loggedInUser", JSON.stringify(userAccounts[i]))
 
             //Makes your username visible at the navbar when logged in
@@ -55,7 +56,7 @@ function check() {
 
             window.location.href = "userPage.html";
             
-            
+            break
         } else {
             alert('Fel användarnamn eller lösenord');
         }

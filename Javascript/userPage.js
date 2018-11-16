@@ -1,6 +1,6 @@
-   
-   
-    function initUserPage() {
+var orderHistory = JSON.parse(localStorage.orders)   
+
+function initUserPage() {
         
         //Shopping cart numbers
         document.getElementById("clicks").innerHTML = shoppingProducts.length;
@@ -17,6 +17,12 @@
             var iconLink = document.getElementById("userIcon");
             iconLink.href = "/userPage.html";
         }
+        printOutHistory()
+    }
 
+    function printOutHistory() {
+        for (i = 0; i < orderHistory.length; i++)
+            document.getElementsByClassName("userPageDiv").innerHTML += (i+1) + ": " + orderHistory[i];
 
     }
+

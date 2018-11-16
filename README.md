@@ -16,6 +16,8 @@ ADDED PAGE FOR USER LOGIN/REGISTRATION
 * Created a registration feature
 * Created a login feature
 * Placed an icon next to shopping cart for a smooth design that directs you to a userpage
+  - If logged OUT it will take you to a log in page
+  - If logged IN it will grant you access to a userpage
 * Added a user page for order history
 * Added a log out button at the user page
 * When logged in username is displayed in the navbar

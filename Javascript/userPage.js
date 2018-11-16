@@ -4,10 +4,9 @@
         
         //Shopping cart numbers
         document.getElementById("clicks").innerHTML = shoppingProducts.length;
-        
+
         //User logged in
        var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-       console.log(loggedInUser);
        
        if(loggedInUser) {
            //Makes your username visible at the navbar when logged in

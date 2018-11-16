@@ -23,7 +23,6 @@ function initSite() {
 
     //User logged in
     var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-    console.log(loggedInUser);
     
     if(loggedInUser) {
         //Makes your username visible at the navbar when logged in
@@ -45,7 +44,6 @@ function initSite() {
 
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
-    console.log(listOfProducts);
     for(var i=0; i < listOfProducts.length; i++)  {
         var mobileProduct = createMobileCard(listOfProducts[i]);
         mobileTemplate.appendChild(mobileProduct);

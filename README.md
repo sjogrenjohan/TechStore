@@ -1,6 +1,4 @@
 # TechStore
-TechStore
-
 Group project to create a similar website created by our teachers
 
 [TechStore Site](https://sjogrenjohan.github.io/TechStore/)

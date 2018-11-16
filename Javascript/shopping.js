@@ -69,7 +69,6 @@ function createShopingCart(product, index) {
     var mobileProduct = document.createElement("div");
     mobileProduct.className = "divShoppingProduct";
     
-    
     var mobileImage = document.createElement("img");
     mobileImage.className = "shoppingImages"
     mobileImage.src = " " +product.image;
@@ -164,19 +163,21 @@ function removeCart(index) {
 function confirmBuy(){
     
     //Saves the order history to the logged in user
+
     var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
     var order = {
         user: loggedInUser.userName,
         date: new Date(),
-        products: localStorage.productArray
+        products: JSON.parse(localStorage.getItem("productArray"))
     }
-    var orders = JSON.parse(localStorage.getItem("orderHistory"));
+    var orders = JSON.parse(localStorage.getItem("orders"));
     if(!orders) {
         orders = [order];
     }
     else {
         orders.push(order);
     }
+
     
     localStorage.setItem("orders", JSON.stringify(orders));
     alert('Tack för ditt köp');

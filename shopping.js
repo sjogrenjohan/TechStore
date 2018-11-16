@@ -149,8 +149,8 @@ function removeCart(index) {
 
 function confirmBuy(){
     alert('Tack för ditt köp');
+    shoppingProducts.splice(0,shoppingProducts.length)
     var productArray = JSON.stringify(shoppingProducts);
-    productArray = [];
     localStorage.productArray = productArray;
     window.location = "/cartPage.html"
     

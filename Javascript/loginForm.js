@@ -66,7 +66,7 @@ function check() {
 
 function logout() {
     localStorage.removeItem("loggedInUser");
-    window.location.href = "app://index.html";
+    window.location.href = "./index.html";
 }
 
 

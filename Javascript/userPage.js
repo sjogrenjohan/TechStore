@@ -52,7 +52,6 @@ function printOrder(order) {
 }
 
 function printProductCard(product) {
-    console.log(product)
     var productTemplate = document.createElement("div");
     productTemplate.className = "productTemplateClass";
 

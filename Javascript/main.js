@@ -31,7 +31,7 @@ function initSite() {
 
         //When logged in the icon directs you to userPage
         var iconLink = document.getElementById("userIcon");
-        iconLink.href = "/userPage.html";
+        iconLink.href = "./userPage.html";
         
     } else {
         var logOutButton = document.getElementById("logOut");

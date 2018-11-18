@@ -13,7 +13,7 @@ function initUserPage() {
         
         //When logged in the icon directs you to userPage
         var iconLink = document.getElementById("userIcon");
-        iconLink.href = "/userPage.html";
+        iconLink.href = "./userPage.html";
         printOutHistory()
     }
 }

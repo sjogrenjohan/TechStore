@@ -9,7 +9,7 @@ function remember() {
     var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
     if(loggedInUser) {
-        window.location.href = "/userPage.html";
+        window.location.href = "./userPage.html";
     }
 
 }
@@ -54,7 +54,7 @@ function check() {
             var userDetails = document.getElementById("user");
             userDetails.innerText = "" + userAccounts[i].userName;
 
-            window.location.href = "app://userPage.html";
+            window.location.href = "./userPage.html";
             
             break
         } else {

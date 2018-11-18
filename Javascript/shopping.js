@@ -186,5 +186,5 @@ function confirmBuy(){
     shoppingProducts.splice(0,shoppingProducts.length);
     var productArray = JSON.stringify(shoppingProducts);
     localStorage.productArray = productArray;
-    window.location = "/cartPage.html";
+    window.location = "./cartPage.html";
 }

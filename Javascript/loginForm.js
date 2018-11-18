@@ -54,7 +54,7 @@ function check() {
             var userDetails = document.getElementById("user");
             userDetails.innerText = "" + userAccounts[i].userName;
 
-            window.location.href = "userPage.html";
+            window.location.href = "./userPage.html";
             
             break
         } else {

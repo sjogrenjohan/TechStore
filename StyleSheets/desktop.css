@@ -51,4 +51,9 @@
     .nav-item .fa-shopping-cart  {
         cursor: pointer;
     }
+
+    .titleText {
+        font-size: 30px;
+    }
 }
+

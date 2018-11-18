@@ -226,3 +226,6 @@ h3 {
     flex-wrap: nowrap;
 }
 
+#user {
+    font-size: 10px;
+}

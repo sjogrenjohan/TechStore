@@ -9,7 +9,7 @@ function remember() {
     var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
     if(loggedInUser) {
-        window.location.href = "userPage.html";
+        window.location.href = "/userPage.html";
     }
 
 }

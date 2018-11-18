@@ -54,7 +54,7 @@ function check() {
             var userDetails = document.getElementById("user");
             userDetails.innerText = "" + userAccounts[i].userName;
 
-            window.location.href = "/userPage.html";
+            window.location.href = "app://userPage.html";
             
             break
         } else {
@@ -66,7 +66,7 @@ function check() {
 
 function logout() {
     localStorage.removeItem("loggedInUser");
-    window.location.href = "/index.html";
+    window.location.href = "app://index.html";
 }
 
 
